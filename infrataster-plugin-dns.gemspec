@@ -26,5 +26,5 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency 'rspec', '~> 3.0'
   spec.add_development_dependency 'rubocop', '0.28.0'
   spec.add_development_dependency 'coveralls', '~> 0.7'
-  spec.add_development_dependency 'byebug'
+  spec.add_development_dependency 'byebug' if RUBY_VERSION >= '2.0'
 end
