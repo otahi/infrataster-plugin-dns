@@ -18,11 +18,13 @@ Gem::Specification.new do |spec|
   spec.test_files    = spec.files.grep(%r{^(test|spec|features)/})
   spec.require_paths = ['lib']
 
-  spec.add_runtime_dependency "infrataster", "~> 0.2.0"
-  spec.add_runtime_dependency "rspec-dns", "~> 0.1.3"
+  spec.add_runtime_dependency 'infrataster', '~> 0.2.0'
+  spec.add_runtime_dependency 'rspec-dns', '~> 0.1.3'
   
   spec.add_development_dependency 'bundler', '~> 1.7'
   spec.add_development_dependency 'rake', '~> 10.0'
-  spec.add_development_dependency "rspec", "~> 3.0"
-  spec.add_development_dependency "byebug"
+  spec.add_development_dependency 'rspec', '~> 3.0'
+  spec.add_development_dependency 'rubocop', '0.28.0'
+  spec.add_development_dependency 'coveralls', '~> 0.7'
+  spec.add_development_dependency 'byebug'
 end

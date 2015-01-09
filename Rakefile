@@ -1,6 +1,10 @@
 require 'bundler/gem_tasks'
 require 'rspec/core/rake_task'
 require 'open-uri'
+require 'coveralls/rake/task'
+require 'rubocop/rake_task'
+
+task :default => ['spec:unit', :quality]
 
 def yellow(str)
   "\e[33m#{str}\e[m"
@@ -46,3 +50,13 @@ namespace :spec do
     end
   end
 end
+
+
+RuboCop::RakeTask.new(:rubocop) do |task|
+  task.patterns = %w(lib/**/*.rb spec/unit/**/*.rb)
+end
+
+task :quality => :rubocop do
+  Coveralls::RakeTask.new
+end
+

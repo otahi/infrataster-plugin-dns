@@ -1,0 +1,15 @@
+# Avoid methods longer than 10 lines of code
+MethodLength:
+  Enabled: false
+
+# Avoid classes longer than 100 lines of code
+ClassLength:
+  Enabled: false
+
+# allow is_a? or have_* method_name
+Style/PredicateName:
+  Enabled: false
+
+# allow lib/infrataster-plugin-dns.rb
+Style/FileName:
+  Enabled: false
