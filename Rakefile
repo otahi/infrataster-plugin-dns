@@ -1,6 +1,6 @@
-require "bundler/gem_tasks"
-require "rspec/core/rake_task"
-require "open-uri"
+require 'bundler/gem_tasks'
+require 'rspec/core/rake_task'
+require 'open-uri'
 
 def yellow(str)
   "\e[33m#{str}\e[m"
@@ -12,12 +12,12 @@ desc 'Run unit and integration tests'
 task :spec => ['spec:unit', 'spec:integration']
 
 namespace :spec do
-  RSpec::Core::RakeTask.new("unit") do |task|
-    task.pattern = "./spec/unit{,/*/**}/*_spec.rb"
+  RSpec::Core::RakeTask.new('unit') do |task|
+    task.pattern = './spec/unit{,/*/**}/*_spec.rb'
   end
 
-  RSpec::Core::RakeTask.new("integration") do |task|
-    task.pattern = "./spec/integration{,/*/**}/*_spec.rb"
+  RSpec::Core::RakeTask.new('integration') do |task|
+    task.pattern = './spec/integration{,/*/**}/*_spec.rb'
   end
 
   namespace :integration do
