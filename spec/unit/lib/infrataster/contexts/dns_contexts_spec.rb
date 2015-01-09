@@ -4,12 +4,13 @@ module Infrataster
   # Infrataster contexts
   module Contexts
     describe DnsContext do
-      subject { described_class.new(nil, nil).public_methods }
+      let(:server) { Server.new('ns.example.com', '192.168.33.10', :dns) }
+      subject { described_class.new(server, nil) }
       it 'should have `have_entry` method' do
-        is_expected.to include(:have_entry)
-      end
-      it 'should have `have_dns` method from rspec-dns' do
-        is_expected.to include(:have_dns)
+        matcher = double('matcher')
+        allow(matcher).to receive(:config)
+        allow(subject).to receive(:have_dns).and_return(matcher)
+        subject.have_entry
       end
     end
   end
