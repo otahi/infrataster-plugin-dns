@@ -1,0 +1,13 @@
+# Vagrantfile
+Vagrant.configure("2") do |config|
+  config.vm.box = "hfm4/centos7"
+
+  config.vm.define :dns do |c|
+    c.vm.network 'private_network', ip: '192.168.33.10'
+  end
+  config.vm.provider 'virtualbox' do |v|
+    v.customize ['modifyvm', :id, '--memory', '256']
+  end
+
+  config.vm.provision :shell, path: 'prepare_dns_service.sh'
+end
