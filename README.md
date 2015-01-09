@@ -2,6 +2,7 @@
 [![Gem Version](https://badge.fury.io/rb/infrataster-plugin-dns.svg)](http://badge.fury.io/rb/infrataster-plugin-dns)
 [![Build Status](https://travis-ci.org/otahi/infrataster-plugin-dns.svg)](https://travis-ci.org/otahi/infrataster-plugin-dns)
 [![Coverage Status](https://coveralls.io/repos/otahi/infrataster-plugin-dns/badge.png)](https://coveralls.io/r/otahi/infrataster-plugin-dns)
+
 DNS plugin for Infrataster with [rspec-dns](https://github.com/spotify/rspec-dns).
 
 ## Installation
