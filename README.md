@@ -1,4 +1,6 @@
 # Infrataster::Plugin::Dns
+[![Build Status](https://travis-ci.org/otahi/infrataster-plugin-dns.svg)](https://travis-ci.org/otahi/infrataster-plugin-dns)
+[![Coverage Status](https://coveralls.io/repos/otahi/infrataster/badge.png)](https://coveralls.io/r/otahi/infrataster)
 
 DNS plugin for Infrataster with [rspec-dns](https://github.com/spotify/rspec-dns).
 
