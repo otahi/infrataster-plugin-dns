@@ -7,7 +7,7 @@ module Infrataster
     class DnsContext < BaseContext
       include RSpec::Matchers
 
-      def have_entry(*args)
+      def have_entry(*_args)
         have_dns.config(nameserver: server.address)
       end
     end
