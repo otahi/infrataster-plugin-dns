@@ -1,5 +1,5 @@
 #!/bin/sh
-yum install bind -y
+yum install bind bind-utils -y
 
 install -m640 -oroot -gnamed /vagrant/named.conf /etc/
 install -m640 -oroot -gnamed /vagrant/example.com.zone /var/named/
