@@ -38,7 +38,7 @@ namespace :spec do
     task :start_vm do
       puts yellow('Starting VM...')
       Dir.chdir(cwd) do
-        system 'vagrant', 'reload', '--provision'
+        system 'vagrant reload --provision | grep "not created" && vagrant up'
       end
     end
 
